@@ -208,6 +208,8 @@ public:
         // TODO: Implement
         if (oldPassword != password_)
             throw invalid_argument("Old password does not match.");
+        validate(newPassword);
+        password_ = newPassword;
     }
 
     // Check if a given string matches the stored password.
